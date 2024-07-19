@@ -31,4 +31,8 @@ public class ItemService {
 		return repository.findById(id);
 	}
 	
+	public void deletar(Long id) {
+		repository.deleteById(id);;
+	}
+	
 }

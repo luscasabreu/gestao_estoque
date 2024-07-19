@@ -1,5 +1,7 @@
 package com.backend.gestaoestoque.models;
 
+import com.backend.gestaoestoque.dtos.response.ItemResponse;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -46,5 +48,17 @@ public class Item {
 	
 	@Column(name = "necessidade_de_reposicao")
 	private Boolean necessidadeDeReposicao;
+	
+	public Item(ItemResponse itemResponse) {
+		this.nome = itemResponse.nome();
+		this.descricao = itemResponse.descricao();
+		this.valor = itemResponse.valor();
+		this.quantidade = itemResponse.quantidade();
+		this.unidadeDeMedida = itemResponse.unidadeDeMedida();
+		this.estoqueMinimo = itemResponse.estoqueMinimo();
+		this.estoqueMaximo = itemResponse.estoqueMaximo();
+		this.necessidadeDeReposicao = itemResponse.necessidadeDeReposicao();
+		
+	}
 
 }
