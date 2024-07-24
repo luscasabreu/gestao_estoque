@@ -8,6 +8,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,18 +27,23 @@ public class Item {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@NotBlank
 	@Column(name = "nome")
 	private String nome;
 	
+	@NotBlank
 	@Column(name = "descricao")
 	private String descricao;
 	
+	@NotNull
 	@Column(name = "valor")
 	private Double valor;
 	
+	@NotNull
 	@Column(name = "quantidade")
 	private Integer quantidade;
 	
+	@NotBlank
 	@Column(name = "unidade_de_medida")
 	private String unidadeDeMedida;
 	
@@ -46,10 +53,12 @@ public class Item {
 	@Column(name = "estoque_maximo")
 	private Integer estoqueMaximo;
 	
+	@NotNull
 	@Column(name = "necessidade_de_reposicao")
 	private Boolean necessidadeDeReposicao;
 	
 	public Item(ItemResponse itemResponse) {
+		this.id = itemResponse.id();
 		this.nome = itemResponse.nome();
 		this.descricao = itemResponse.descricao();
 		this.valor = itemResponse.valor();

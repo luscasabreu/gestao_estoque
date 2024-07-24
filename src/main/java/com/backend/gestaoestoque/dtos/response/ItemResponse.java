@@ -1,6 +1,7 @@
 package com.backend.gestaoestoque.dtos.response;
 
 public record ItemResponse( 
+		Long id,
 		String nome, 
 		String descricao, 
 		Double valor, 
