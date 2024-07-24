@@ -56,18 +56,6 @@ public class Item {
 	@NotNull
 	@Column(name = "necessidade_de_reposicao")
 	private Boolean necessidadeDeReposicao;
-	
-	public Item(ItemResponse itemResponse) {
-		this.id = itemResponse.id();
-		this.nome = itemResponse.nome();
-		this.descricao = itemResponse.descricao();
-		this.valor = itemResponse.valor();
-		this.quantidade = itemResponse.quantidade();
-		this.unidadeDeMedida = itemResponse.unidadeDeMedida();
-		this.estoqueMinimo = itemResponse.estoqueMinimo();
-		this.estoqueMaximo = itemResponse.estoqueMaximo();
-		this.necessidadeDeReposicao = itemResponse.necessidadeDeReposicao();
-		
-	}
+
 
 }
