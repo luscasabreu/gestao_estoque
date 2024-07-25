@@ -1,7 +1,5 @@
 package com.backend.gestaoestoque.models;
 
-import com.backend.gestaoestoque.dtos.response.ItemResponse;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
