@@ -5,12 +5,14 @@ import java.security.Timestamp;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -39,6 +41,7 @@ public class User {
 	private String sobrenome;
 	
 	@NotBlank
+	@Email
 	@Column(name = "email")
 	private String email;
 	
@@ -63,6 +66,5 @@ public class User {
 	@NotBlank
 	@Column(name = "perfil_acesso")
 	private String perfilAcesso;
-	
 	
 }

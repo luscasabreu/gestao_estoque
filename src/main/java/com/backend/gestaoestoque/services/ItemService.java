@@ -3,12 +3,12 @@ package com.backend.gestaoestoque.services;
 import java.util.List;
 import java.util.Optional;
 
-import org.apache.catalina.mbeans.MBeanUtils;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PutMapping;
+
 
 import com.backend.gestaoestoque.models.Item;
 import com.backend.gestaoestoque.repositories.ItemRepository;
